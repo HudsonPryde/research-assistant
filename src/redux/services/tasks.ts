@@ -2,6 +2,9 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { addSupport, removeTask } from '../slice';
 import { TaskStatus } from '../../types';
 
+/**
+ * The API object for performing tasks-related operations.
+ */
 export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
     reducerPath: 'api',
