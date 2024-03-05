@@ -6,6 +6,7 @@ grading arguments and suggesting improvements in the form of claim expansion and
 ## Installation
 1. npm i
 2. docker pull redis
+3. add your Cohere api key to the python .env
 3. npm run dev
 
 ## Usage

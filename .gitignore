@@ -6,7 +6,9 @@
 .pnp.js
 .yarn/install-state.gz
 .venv
-/api/__pycache__
+**/__pycache__
+.vscode
+
 
 # testing
 /coverage
