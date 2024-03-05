@@ -1,0 +1,100 @@
+button {
+    all: unset;
+}
+
+/* main editor container */
+.contentEditable {
+  @apply bg-white;
+  @apply p-4;
+  @apply rounded-md;
+  @apply shadow-md;
+  @apply mb-4;
+  @apply focus:outline-none;
+  @apply overflow-y-auto;
+  @apply w-full;
+  max-width: 816px;
+  height: 1056px;
+}
+  
+.placeHolder {
+  @apply text-gray-500;
+  @apply text-lg;
+  @apply absolute;
+  @apply top-[7.1rem];
+  @apply pl-4;
+  @apply pointer-events-none;
+  @apply z-10;
+}
+
+.toolbarRoot {
+  display: flex;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 14px;
+  max-width: 816px;
+  min-width: max-content;
+  @apply bg-zinc-300;
+}
+
+.toolbarButton {
+  flex: 0 0 auto;
+  padding: 5px 15px;
+  border-radius: 9px;
+  display: inline-flex;
+  font-size: 13px;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.toolbarButton:focus {
+  position: relative;
+}
+
+.toolbarSeparator {
+  width: 1px;
+  background-color: var(--mauve6);
+  margin: 0 10px;
+}
+
+.toolbarButton:hover {
+  cursor: pointer;
+  @apply bg-zinc-400
+}
+
+.toolbar-wrapper {
+    display: flex;
+}
+
+.editor-bold {
+    font-weight: 600;
+}
+
+.editor-italic {
+    font-style: italic;
+}
+
+.editor-underline {
+    text-decoration: underline;
+}
+
+.editor-strikethrough {
+    text-decoration: line-through;
+}
+
+.editor-underlineStrikethrough {
+    text-decoration: underline line-through;
+}
+
+.editor-h1 {
+    font-size: 48px;
+}
+
+.editor-h2 {
+    font-size: 40px;
+}
+
+.editor-h3 {
+    font-size: 24px;
+}

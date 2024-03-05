@@ -2,32 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* fullscreen background */
+html {
+  @apply bg-[#EFEEF6]
+}
+
+/* main toolbar container */
+.mdxeditor-toolbar {
+  @apply p-2;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply justify-between;
+}
+
+
+
+/* editor text container */
+.mdxeditor-root-contenteditable div[role=textbox] {
+  @apply w-full;
+  @apply overflow-y-auto;
+  @apply focus:outline-none;
+  @apply text-xl;
+}
+
+/* toolbar groups */
+.mdxeditor-toolbar > div {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply space-x-2;
+}
+
+/* containers in toolbar groups */
+.mdxeditor-toolbar > div > div {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply space-x-2;
+}
+
+/* toolbar multi-selector */
+.mdxeditor-toolbar > div > span {
+  @apply text-gray-500;
+  @apply text-sm;
+}
+
+/* buttons in toolbar group containers */
+.mdxeditor-toolbar > div > div > div > button {
+  @apply bg-white;
+  @apply p-2;
+  @apply rounded-md;
+  @apply shadow-md;
+  @apply focus:outline-none;
+  @apply transition-all;
+  @apply duration-200;
+  @apply ease-in-out;
+  @apply hover:cursor-pointer;
+  @apply hover:bg-gray-200;
+}
+
+/* text in textbox with classname containing '_underline' */
+.prose > p > [class*=_underline] {
+  @apply underline;
 }
